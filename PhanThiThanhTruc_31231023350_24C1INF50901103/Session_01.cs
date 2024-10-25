@@ -10,7 +10,6 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
     {
         //static void Main (string[] args)
         //{
-        //    //Excercises unit 2 structure programing language fundamentals
         //    //Bai2_Ex01();
         //    //Bai2_Ex02();
         //    //Bai2_Ex03();
@@ -22,7 +21,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
         //    //Bai2_Ex09();
         //    //Bai2_Ex10();
         //}
-        public static void Bai2_Ex01()
+        /// <summary>
+        /// C# Structure Programming Language Fundamentals exercises
+        /// </summary>
+        public static void Bai2_Ex01() //1. Write programs to Add / Sum Two Numbers.
         {
             Console.Write("Nhap so a: ");
             int a = int.Parse(Console.ReadLine());
@@ -31,7 +33,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             int c = a + b;
             Console.WriteLine($"{a}+{b}={c}");
         }
-        public static void Bai2_Ex02()
+        public static void Bai2_Ex02() //2. Write programs to Swap Values of Two Variables.
         {
             Console.Write("Nhap bien a: ");
             int a = int.Parse(Console.ReadLine());
@@ -43,7 +45,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             Console.WriteLine($"Gia tri cua bien a:{a}");
             Console.WriteLine($"Gia tri cua bien b:{b}");
         }
-        public static void Bai2_Ex03()
+        public static void Bai2_Ex03() //3. Write programs to Multiply two Floating Point Numbers.
         {
             Console.Write("Nhap so thu nhat: ");
             float a = float.Parse(Console.ReadLine());
@@ -52,25 +54,26 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             float ketqua = a * b;
             Console.WriteLine($"Ket qua nhan hai so: {ketqua}");
         }
-        public static void Bai2_Ex04()
+        public static void Bai2_Ex04() //4. Write programs to convert feet to meter.
         {
             Console.Write("Nhap gia tri feet: ");
             double feet = double.Parse(Console.ReadLine());
-            double doi = feet * 0.3048;
-            Console.WriteLine($"Gia tri meter nhan duoc: {doi} m");
+            double meter = feet * 0.3048;
+            Console.WriteLine($"Gia tri meter nhan duoc: {meter} m");
         }
-        public static void Bai2_Ex05()
+        public static void Bai2_Ex05() //5. Write programs to convert Celsius to Fahrenheit and vice versa.
         {
             Console.Write("Nhap nhiet do theo do C: ");
             double C = double.Parse(Console.ReadLine());
             double F = (C * 9 / 5) + 32;
             Console.WriteLine($"Nhiet do theo do F: {F}");
+
             Console.Write("Nhap nhiet do theo do F: ");
             double f = double.Parse(Console.ReadLine());
             double c = (f - 32) * 5 / 9;
             Console.WriteLine($"Nhiet do theo do C: {c}");
         }
-        public static void Bai2_Ex06()
+        public static void Bai2_Ex06() //6. Write programs to find the Size of data types.
         {
             Console.WriteLine("Kich thuc cua int: " + sizeof(int) + " bytes");
             Console.WriteLine("Kich thuc cua float: " + sizeof(float) + " bytes");
@@ -81,14 +84,14 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             Console.WriteLine("Kich thuc cua short: " + sizeof(short) + " bytes");
             Console.WriteLine("Kich thuc cua byte: " + sizeof(byte) + " bytes");
         }
-        public static void Bai2_Ex07()
-        {
+        public static void Bai2_Ex07() //7. Write programs to Print ASCII Value (tip: read character, print number of this char)
+        { 
             Console.Write("Nhap vao ky tu: ");
             char c = char.Parse(Console.ReadLine());
             int num = c;
             Console.WriteLine($"{c} in ASCII = {num}");
         }
-        public static void Bai2_Ex08()
+        public static void Bai2_Ex08() //8. Write programs to Calculate Area of Circle
         {
             Console.Write("Nhap ban kinh: ");
             float r = float.Parse(Console.ReadLine());
@@ -97,14 +100,14 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             //Math.Pow(r, 10);// r mu 10
             //Math.Sqrt(r);// can bac hai
         }
-        public static void Bai2_Ex09()
+        public static void Bai2_Ex09() //9. Write programs to Calculate Area of Square
         {
             Console.Write("Nhap canh hinh vuong: ");
             float a = float.Parse(Console.ReadLine());
             double area = Math.Pow(a, 2);
             Console.WriteLine($"Dien tich hinh vuong canh {a} la: {area}");
         }
-        public static void Bai2_Ex10()
+        public static void Bai2_Ex10() //10. Write programs . to convert days to years, weeks and days
         {
             Console.Write("Nhap so ngay: ");
             int ngay = int.Parse(Console.ReadLine());

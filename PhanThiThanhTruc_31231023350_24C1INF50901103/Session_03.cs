@@ -12,14 +12,20 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
     {
         static void Main(string[] args)
         {
-            //Bai4_Ex01();
-            //Bai4_Ex02();
-            //Bai4_Ex03();
-            //Bai4_Ex06();
-            //Bai4_Ex07();
-            Bai4_Ex04();
+            Bai4_Ex01_P1();
+            Bai4_Ex02_P1();
+            Bai4_Ex03_P1();
+            Bai4_Ex01_P2();
+            Bai4_Ex02_P2();
+            Bai4_Ex03_P2();
+            Bai4_Ex06_P2();
+            Bai4_Ex07_P2();
+            Bai4_Ex08_P2();
         }
-        static void Bai4_Ex01() //1. Write a C# Sharp program to check whether a given number is even or odd.
+        /// <summary>
+        /// Control flow statements exercises
+        /// </summary>
+        static void Bai4_Ex01_P1() //1. Write a C# Sharp program to check whether a given number is even or odd.
         {
             Console.Write("Nhap vao so nguyen: ");
             int a = int.Parse(Console.ReadLine());
@@ -32,7 +38,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 Console.WriteLine($"So {a} la so le");
             }
         }
-        public static void Bai4_Ex02() //2. Write a C# Sharp program to find the largest of three numbers.
+        public static void Bai4_Ex02_P1() //2. Write a C# Sharp program to find the largest of three numbers.
         {
             Console.WriteLine("Vui long nhap vao ba so: ");
             Console.Write("Nhap vao so thu nhat: ");
@@ -55,7 +61,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             }
             Console.WriteLine($"So lon nhat trong ba so la {max}");
         }
-        public static void Bai4_Ex03() //Write a C# Sharp program to accept a coordinate point in an XY coordinate system and determine in which quadrant the coordinate point lies.
+        public static void Bai4_Ex03_P1() //3. Write a C# Sharp program to accept a coordinate point in an XY coordinate system and determine in which quadrant the coordinate point lies.
         {
             Console.WriteLine("Vui long nhap toa do diem: ");
             Console.Write("Nhap toa do X: "); int x = int.Parse(Console.ReadLine());
@@ -81,7 +87,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 Console.WriteLine("Toa do da cho nam tai goc toa do");
             }
         }
-        public static void Bai4_Ex04() // 1. Write a program to check whether a triangle is Equilateral, Isosceles or Scalene.
+        public static void Bai4_Ex01_P2() // 1. Write a program to check whether a triangle is Equilateral, Isosceles or Scalene.
         {
             do
             {
@@ -93,28 +99,28 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 Console.Write("Nhap canh c: ");
                 int c = int.Parse(Console.ReadLine());
 
-            if (a + b > c && b + c > a && a + c > b)
-            {
-                if (a == b || b == c || c == a)
+                if (a + b > c && b + c > a && a + c > b)
                 {
-                    if (a == b && b == c)
+                    if (a == b || b == c || c == a)
                     {
-                        Console.WriteLine(" Tam giac do la tam giac deu");
+                        if (a == b && b == c)
+                        {
+                            Console.WriteLine(" Tam giac do la tam giac deu");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Tam giac do la tam giac can");
+                        }
                     }
                     else
                     {
-                        Console.WriteLine("Tam giac do la tam giac can");
+                        Console.WriteLine("Tam giac do la tam giac khong can");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Tam giac do la tam giac khong can");
-                }
-            }
-            else
-            {
                     Console.WriteLine("Ba canh nay khong phai tam giac, vui long nhap lai.");
-            }
+                }
                 Console.WriteLine("Bạn có muốn tiếp tục nhập (y/n)?");
                 string tiepTuc = Console.ReadLine();
                 if (tiepTuc.ToLower() != "y")
@@ -124,7 +130,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
 
             } while (true);
         }
-        public static void Bai4_Ex05() //2. Write a program to read 10 numbers and find their average and sum.
+        public static void Bai4_Ex02_P2() //2. Write a program to read 10 numbers and find their average and sum.
         {
             double tong = 0;
             for (int i = 0; i < 10; i++)
@@ -137,7 +143,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             Console.WriteLine($"Tong cua 10 so: {tong}");
             Console.WriteLine($"Trung binh cua 10 so: {tb}");
         }
-        public static void Bai4_Ex06() //3. Write a program to display the multiplication table of a given integer.
+        public static void Bai4_Ex03_P2() //3. Write a program to display the multiplication table of a given integer.
         {
             Console.WriteLine("Vui long nhap so nguyen cho truoc: ");
             int song = int.Parse(Console.ReadLine());
@@ -149,9 +155,77 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 Console.WriteLine($"{song}*{i}={ketqua}");
             }
         }
-        public static void Bai4_Ex07()//8. Write a program to determine whether a given number is prime or not.
+        public static void Bai4_Ex06_P2() //6. Write a program to display the n terms of harmonic series and their sum. 1 + 1/2 + 1/3 + 1/4 + 1/5 ... 1/n terms
         {
+            int n;
+            double Tong = 0;
+            do
+            {
+                Console.Write("Nhap so luong so hang n: ");
+                n = int.Parse(Console.ReadLine());
+                if (n <= 0)
+                {
+                    Console.WriteLine("Gia tri khong hop le. Vui long nhap lai");
+                }
+            } while (n <= 0);
+            for (int i = 1; i <= n; i++)
+            {
+                Tong += 1.0 / i;
+            }
+            Console.WriteLine($"Tong cua {n} so hang dieu hoa la: {Tong}");
         }
+        public static void Bai4_Ex07_P2() //7. Write a program to find the ‘perfect’ numbers within a given number range.
+        {
+            int gioihanduoi;
+            int gioihantren;
+            Console.Write("Nhap gioi han duoi: ");
+            gioihanduoi = int.Parse(Console.ReadLine());
 
+            Console.Write("Nhap gioi han tren: ");
+            gioihantren = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Cac so hoan hao trong khoang tu {gioihanduoi} đen {gioihantren} la:");
+            for (int number = gioihanduoi; number <= gioihantren; number++)
+            {
+                int Tong = 0;
+                for (int i = 1; i <= number / 2; i++)
+                {
+                    if (number % i == 0)
+                    {
+                        Tong += i;
+                    }
+                }
+                if (Tong == number)
+                {
+                    Console.WriteLine(number);
+                }
+            }
+        }
+            public static void Bai4_Ex08_P2()//8. Write a program to determine whether a given number is prime or not.
+            {
+                int number;
+                do
+                {
+                    Console.Write("Nhap vao so nguyen: ");
+                    number = int.Parse(Console.ReadLine());
+                }
+                while (number <= 0);
+                if (number <= 1)
+                {
+                    Console.WriteLine($"{number} khong phai la so nguyen to");
+                }
+                else
+                {
+                    for (int i = 2; i <= (int)Math.Sqrt(number); i++)
+                    {
+                        if (number % i == 0)
+                        {
+                            Console.WriteLine($"{number} khong phai so nguyen to");
+                            return;
+                        }
+                    }
+                    Console.WriteLine($"{number} la so nguyen to");
+                }
+            }
     }
 }
