@@ -12,15 +12,18 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
     {
         static void Main(string[] args)
         {
-            Bai4_Ex01_P1();
-            Bai4_Ex02_P1();
-            Bai4_Ex03_P1();
-            Bai4_Ex01_P2();
-            Bai4_Ex02_P2();
-            Bai4_Ex03_P2();
-            Bai4_Ex06_P2();
-            Bai4_Ex07_P2();
-            Bai4_Ex08_P2();
+            //Bai4_Ex01_P1();
+            //Bai4_Ex02_P1();
+            //Bai4_Ex03_P1();
+            //Bai4_Ex01_P2();
+            //Bai4_Ex02_P2();
+            //Bai4_Ex03_P2();
+            //Bai4_Ex06_P2();
+            //Bai4_Ex07_P2();
+            //Bai4_Ex08_P2();
+            Bai4_Ex04_01_P2();
+            //Bai4_Ex04_02_P2();
+            //Bai4_Ex04_03_P2();
         }
         /// <summary>
         /// Control flow statements exercises
@@ -29,6 +32,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
         {
             Console.Write("Nhap vao so nguyen: ");
             int a = int.Parse(Console.ReadLine());
+
             if (a % 2 == 0)
             {
                 Console.WriteLine($"So {a} la so chan");
@@ -48,6 +52,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             Console.Write("Nhap vao so thu ba: ");
             int c = int.Parse(Console.ReadLine());
             int max = a;
+
             if (b > max)
             {
                 if (c > max)
@@ -66,6 +71,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             Console.WriteLine("Vui long nhap toa do diem: ");
             Console.Write("Nhap toa do X: "); int x = int.Parse(Console.ReadLine());
             Console.Write("Nhap toa do Y: "); int y = int.Parse(Console.ReadLine());
+
             if (x > 0 && y > 0)
             {
                 Console.WriteLine("Toa do da cho thuoc phan tu thu nhat");
@@ -121,11 +127,11 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 {
                     Console.WriteLine("Ba canh nay khong phai tam giac, vui long nhap lai.");
                 }
-                Console.WriteLine("Bạn có muốn tiếp tục nhập (y/n)?");
+                Console.WriteLine("Ban co muon tiep tuc nhap <y/n>?");
                 string tiepTuc = Console.ReadLine();
                 if (tiepTuc.ToLower() != "y")
                 {
-                    break;  // Thoát khỏi vòng lặp nếu người dùng không muốn tiếp tục
+                    break; 
                 }
 
             } while (true);
@@ -155,10 +161,63 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 Console.WriteLine($"{song}*{i}={ketqua}");
             }
         }
+        public static void Bai4_Ex04_01_P2() //4. Write a program to display a pattern like triangles with number.
+        //Pattern 1
+        {
+            Console.Write("Nhap so dong ket thuc cua day: ");
+            int n = int.Parse(Console.ReadLine()); 
+
+            for (int i = 1; i <= n; i++) // lap theo chieu doc
+            {
+                for (int j = 1; j <= i; j++) // lap theo chieu ngang
+                {
+                    Console.Write(j); // In cac so tu 1 den i
+                }
+                Console.WriteLine(); // Xuong dong sau moi hang
+            }
+        }
+        public static void Bai4_Ex04_02_P2()
+        //Pattern 2
+        {
+            int n = 1;
+            Console.Write("Nhap so dong cua mau: ");
+            int rows = int.Parse(Console.ReadLine()); 
+
+            for (int i = 1; i <= rows; i++) 
+            {
+                for (int j = 1; j <= i; j++) 
+                {
+                    Console.Write($"{n} "); 
+                    n++; // Tang gia tri n sau moi lan in
+                }
+                Console.WriteLine(); 
+            }
+        }
+        public static void Bai4_Ex04_03_P2()
+        //Pattern 3
+        {
+            int n = 1;
+            int rows = 4;
+
+            for (int i = 1; i <= rows; i++) // Vòng lặp chiều dọc từ 1 đến rows
+            {
+                for (int s = 1; s <= rows - i; s++) // Vòng lặp in khoảng trắng
+                {
+                    Console.Write(" "); // In khoảng trắng để căn giữa
+                }
+                for (int j = 1; j <= i; j++) // Vòng lặp in các số
+                {
+                    Console.Write($"{n} "); // In giá trị của n kèm khoảng trắng
+                    n++; // Tăng giá trị của n cho lần in tiếp theo
+                }
+                    Console.WriteLine(); // Xuống dòng sau khi in xong một hàng
+                }
+            }
         public static void Bai4_Ex06_P2() //6. Write a program to display the n terms of harmonic series and their sum. 1 + 1/2 + 1/3 + 1/4 + 1/5 ... 1/n terms
         {
             int n;
             double Tong = 0;
+
             do
             {
                 Console.Write("Nhap so luong so hang n: ");
@@ -178,6 +237,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
         {
             int gioihanduoi;
             int gioihantren;
+
             Console.Write("Nhap gioi han duoi: ");
             gioihanduoi = int.Parse(Console.ReadLine());
 
@@ -204,6 +264,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             public static void Bai4_Ex08_P2()//8. Write a program to determine whether a given number is prime or not.
             {
                 int number;
+
                 do
                 {
                     Console.Write("Nhap vao so nguyen: ");
@@ -221,7 +282,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                         if (number % i == 0)
                         {
                             Console.WriteLine($"{number} khong phai so nguyen to");
-                            return;
+                            return; 
                         }
                     }
                     Console.WriteLine($"{number} la so nguyen to");

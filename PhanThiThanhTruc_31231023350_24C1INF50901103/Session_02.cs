@@ -84,6 +84,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
         {
             Console.Write("Nhap gia tri y: ");
             int y = int.Parse(Console.ReadLine());
+
             if (y <= 5 && y >= -5)
             {
                 int x = y * y + 2 * y + 1;
@@ -125,6 +126,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             string nguyenam = "aoeuiAoeui";
             Console.Write("Vui long nhap vao mot ky tu:");
             string input = Console.ReadLine();
+
             if (input.Length != 1)
             {
                 Console.WriteLine("Vui long nhap mot ky tu duy nhat.");
