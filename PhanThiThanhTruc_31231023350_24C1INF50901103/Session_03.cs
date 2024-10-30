@@ -21,7 +21,7 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             //Bai4_Ex06_P2();
             //Bai4_Ex07_P2();
             //Bai4_Ex08_P2();
-            Bai4_Ex04_01_P2();
+            //Bai4_Ex04_01_P2();
             //Bai4_Ex04_02_P2();
             //Bai4_Ex04_03_P2();
         }
@@ -261,9 +261,9 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 }
             }
         }
-            public static void Bai4_Ex08_P2()//8. Write a program to determine whether a given number is prime or not.
-            {
-                int number;
+        public static void Bai4_Ex08_P2()//8. Write a program to determine whether a given number is prime or not.
+        {
+             int number;
 
                 do
                 {
@@ -287,6 +287,6 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                     }
                     Console.WriteLine($"{number} la so nguyen to");
                 }
-            }
+        }
     }
 }

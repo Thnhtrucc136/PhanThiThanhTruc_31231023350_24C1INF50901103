@@ -122,33 +122,20 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
         }
         public static void Bai4_Ex05() //5. Write a C# Sharp program that takes a character as input and checks if it is a vowel, a digit, or any other symbol.
         {
-            double number;
-            string nguyenam = "aoeuiAoeui";
-            Console.Write("Vui long nhap vao mot ky tu:");
-            string input = Console.ReadLine();
-
-            if (input.Length != 1)
+            Console.Write("Nhap mot ky tu: ");
+            char kytu = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+            if ("AEIOUaeiou".IndexOf(kytu) >= 0)
             {
-                Console.WriteLine("Vui long nhap mot ky tu duy nhat.");
-                return;
+                Console.WriteLine($"{kytu} la mot nguyen am.");
             }
-            char kyTu = input[0];
-            if (double.TryParse(kyTu.ToString(), out number))
+            else if (char.IsDigit(kytu))
             {
-                Console.WriteLine($"Ky tu '{kyTu}' la chu so.");
-            }
-            else if (IsVowel(kyTu))
-            {
-                Console.WriteLine($"Ky tu '{kyTu}' la nguyen am.");
+                Console.WriteLine($"{kytu} la mot chu so.");
             }
             else
             {
-                Console.WriteLine($"Ky tu '{kyTu}' là ky hieu khac.");
-            }
-            static bool IsVowel(char kyTu)
-            {
-                kyTu = char.ToLower(kyTu); 
-                return kyTu == 'a' || kyTu == 'e' || kyTu == 'i' || kyTu == 'o' || kyTu == 'u';
+                Console.WriteLine($"{kytu} la mot ky hieu khac.");
             }
         }
     }
