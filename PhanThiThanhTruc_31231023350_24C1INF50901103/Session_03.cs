@@ -10,25 +10,27 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
 {
     internal class Session_03
     {
-        static void Main(string[] args)
-        {
-            //Bai4_Ex01_P1();
-            //Bai4_Ex02_P1();
-            //Bai4_Ex03_P1();
-            //Bai4_Ex01_P2();
-            //Bai4_Ex02_P2();
-            //Bai4_Ex03_P2();
-            //Bai4_Ex06_P2();
-            //Bai4_Ex07_P2();
-            //Bai4_Ex08_P2();
-            //Bai4_Ex04_01_P2();
-            //Bai4_Ex04_02_P2();
-            //Bai4_Ex04_03_P2();
-        }
+        //static void Main(string[] args)
+        //{
+        //Bai4_Ex01_P1();
+        //Bai4_Ex02_P1();
+        //Bai4_Ex03_P1();
+        //Bai4_Ex01_P2();
+        //Bai4_Ex02_P2();
+        //Bai4_Ex03_P2();
+        //Bai4_Ex06_P2();
+        //Bai4_Ex07_P2();
+        //Bai4_Ex08_P2();
+        //Bai4_Ex04_01_P2();
+        //Bai4_Ex04_02_P2();
+        //Bai4_Ex04_03_P2();
+        //}
         /// <summary>
-        /// Control flow statements exercises
+        /// Control flow statements exercises <br/>
+        /// 1. Write a C# Sharp program to check whether a given number is even or odd.
         /// </summary>
-        static void Bai4_Ex01_P1() //1. Write a C# Sharp program to check whether a given number is even or odd.
+        /// 
+        static void Bai4_Ex01_P1() 
         {
             Console.Write("Nhap vao so nguyen: ");
             int a = int.Parse(Console.ReadLine());
@@ -42,7 +44,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 Console.WriteLine($"So {a} la so le");
             }
         }
-        public static void Bai4_Ex02_P1() //2. Write a C# Sharp program to find the largest of three numbers.
+        /// <summary>
+        /// 2. Write a C# Sharp program to find the largest of three numbers.
+        /// </summary>
+        public static void Bai4_Ex02_P1() 
         {
             Console.WriteLine("Vui long nhap vao ba so: ");
             Console.Write("Nhap vao so thu nhat: ");
@@ -66,7 +71,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             }
             Console.WriteLine($"So lon nhat trong ba so la {max}");
         }
-        public static void Bai4_Ex03_P1() //3. Write a C# Sharp program to accept a coordinate point in an XY coordinate system and determine in which quadrant the coordinate point lies.
+        /// <summary>
+        /// 3. Write a C# Sharp program to accept a coordinate point in an XY coordinate system and determine in which quadrant the coordinate point lies.
+        /// </summary>
+        public static void Bai4_Ex03_P1() 
         {
             Console.WriteLine("Vui long nhap toa do diem: ");
             Console.Write("Nhap toa do X: "); int x = int.Parse(Console.ReadLine());
@@ -93,7 +101,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 Console.WriteLine("Toa do da cho nam tai goc toa do");
             }
         }
-        public static void Bai4_Ex01_P2() // 1. Write a program to check whether a triangle is Equilateral, Isosceles or Scalene.
+        /// <summary>
+        /// 1. Write a program to check whether a triangle is Equilateral, Isosceles or Scalene.
+        /// </summary>
+        public static void Bai4_Ex01_P2() 
         {
             do
             {
@@ -136,7 +147,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
 
             } while (true);
         }
-        public static void Bai4_Ex02_P2() //2. Write a program to read 10 numbers and find their average and sum.
+        /// <summary>
+        /// 2. Write a program to read 10 numbers and find their average and sum.
+        /// </summary>
+        public static void Bai4_Ex02_P2() 
         {
             double tong = 0;
             for (int i = 0; i < 10; i++)
@@ -149,7 +163,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             Console.WriteLine($"Tong cua 10 so: {tong}");
             Console.WriteLine($"Trung binh cua 10 so: {tb}");
         }
-        public static void Bai4_Ex03_P2() //3. Write a program to display the multiplication table of a given integer.
+        /// <summary>
+        /// 3. Write a program to display the multiplication table of a given integer.
+        /// </summary>
+        public static void Bai4_Ex03_P2()
         {
             Console.WriteLine("Vui long nhap so nguyen cho truoc: ");
             int song = int.Parse(Console.ReadLine());
@@ -161,7 +178,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 Console.WriteLine($"{song}*{i}={ketqua}");
             }
         }
-        public static void Bai4_Ex04_01_P2() //4. Write a program to display a pattern like triangles with number.
+        /// <summary>
+        /// 4. Write a program to display a pattern like triangles with number.
+        /// </summary>
+        public static void Bai4_Ex04_01_P2() 
         //Pattern 1
         {
             Console.Write("Nhap so dong ket thuc cua day: ");
@@ -213,7 +233,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                     Console.WriteLine(); // Xuống dòng sau khi in xong một hàng
                 }
             }
-        public static void Bai4_Ex06_P2() //6. Write a program to display the n terms of harmonic series and their sum. 1 + 1/2 + 1/3 + 1/4 + 1/5 ... 1/n terms
+        /// <summary>
+        /// 6. Write a program to display the n terms of harmonic series and their sum. 1 + 1/2 + 1/3 + 1/4 + 1/5 ... 1/n terms
+        /// </summary>
+        public static void Bai4_Ex06_P2() 
         {
             int n;
             double Tong = 0;
@@ -233,7 +256,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
             }
             Console.WriteLine($"Tong cua {n} so hang dieu hoa la: {Tong}");
         }
-        public static void Bai4_Ex07_P2() //7. Write a program to find the ‘perfect’ numbers within a given number range.
+        /// <summary>
+        /// 7. Write a program to find the ‘perfect’ numbers within a given number range.
+        /// </summary>
+        public static void Bai4_Ex07_P2() 
         {
             int gioihanduoi;
             int gioihantren;
@@ -261,7 +287,10 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
                 }
             }
         }
-        public static void Bai4_Ex08_P2()//8. Write a program to determine whether a given number is prime or not.
+        /// <summary>
+        /// 8. Write a program to determine whether a given number is prime or not.
+        /// </summary>
+        public static void Bai4_Ex08_P2()
         {
              int number;
 
