@@ -11,19 +11,19 @@ namespace PhanThiThanhTruc_31231023350_24C1INF50901103
 {
     internal class Session_04
     {
-        static void Main (string[] args)
-        {
-            //Bai 1
-            int m = maxOfThreeNumber(2, 3, 4);
-            Console.WriteLine(m);
-            Factorial(6);//Bai 2
-            IsPrime(3);//Bai 3
-            printPrimeNumberUnderN(10);//Bai 4.1
-            printFirstNprime(10);//Bai4.2
-            printAllPerfectNumberLessThan(1000); //Bai 5
-            isPangram("The quick brown fox jumps over the lazy dog"); //Bai 6
-            Console.ReadKey();
-        }
+        //static void Main (string[] args)
+        //{
+        //    //Bai 1
+        //    int m = maxOfThreeNumber(2, 3, 4);
+        //    Console.WriteLine(m);
+        //    Factorial(6);//Bai 2
+        //    IsPrime(3);//Bai 3
+        //    printPrimeNumberUnderN(10);//Bai 4.1
+        //    printFirstNprime(10);//Bai4.2
+        //    printAllPerfectNumberLessThan(1000); //Bai 5
+        //    isPangram("The quick brown fox jumps over the lazy dog"); //Bai 6
+        //    Console.ReadKey();
+        //}
         /// <summary>
         /// <summary>
         /// 1. Write a C# function to find the maximum of three numbers.
